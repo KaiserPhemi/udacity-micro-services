@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: udagram-app
+  labels:
+    app: udagram-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      service: udagram-app
+  template:
+    metadata:
+      labels:
+        api: udagram-app
+    spec:
+      containers:
+      - name: udagram-frontend
+        image: officialphemi/udagram-frontend
+        ports:
+        - containerPort: 80
+      restartPolicy: Always
