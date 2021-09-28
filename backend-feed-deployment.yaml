@@ -8,11 +8,11 @@ spec:
   replicas: 2
   selector:
     matchLabels:
-      service: udagram-api-feed
+      app: udagram-api-feed
   template:
     metadata:
       labels:
-        api: udagram-api-feed
+        app: udagram-api-feed
     spec:
       containers:
       - name: udagram-api-feed

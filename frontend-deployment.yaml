@@ -8,11 +8,11 @@ spec:
   replicas: 2
   selector:
     matchLabels:
-      service: udagram-app
+      app: udagram-app
   template:
     metadata:
       labels:
-        api: udagram-app
+        app: udagram-app
     spec:
       containers:
       - name: udagram-frontend
