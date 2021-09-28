@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: udagram-api-user
-        image: officialphemi/udagram-api-user
+        image: officialphemi/udagram-api-user:v4
         ports:
         - containerPort: 80
       restartPolicy: Always
